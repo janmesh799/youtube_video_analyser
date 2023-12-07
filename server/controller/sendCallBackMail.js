@@ -4,8 +4,6 @@ const senderEmail = process.env.senderEmail;
 const senderPass = process.env.senderPass;
 const sendCallBackMail = async (receiverEmail, details) => {
   try {
-    console.log(senderEmail, senderPass);
-    ``;
     let mailTransporter = nodemailer.createTransport({
       //   service: "gmail",
       host: "smtp.gmail.com",

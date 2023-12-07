@@ -4,22 +4,33 @@ const requestCallBack = async (req, res) => {
   let errorCode = null;
   try {
     const { name, mobile, preferredSlot } = req.body;
-    let isSend = await sendCallBackMail("janmesh799@gmail.com", {
+    await sendCallBackMail("janmesh799@gmail.com", {
       name,
       mobile,
       preferredSlot,
-    }) ;
-    if(process.env.ravi_email){
-      isSend |= await sendCallBackMail(process.env.ravi_email, {
+    })
+      .then(() => {
+        res
+          .status(200)
+          .json({ success: true, message: "Call Back registered" });
+      })
+      .catch((err) => {
+        throw new Error(`Call Back not registered due to ${err.message}`);
+      });
+    if (process.env.ravi_email) {
+      await sendCallBackMail(process.env.ravi_email, {
         name,
         mobile,
         preferredSlot,
-      }) ;
-    }
-    if (isSend) {
-      res.status(200).json({ success: true, message: "Call Back registered" });
-    } else {
-      throw new Error("Call Back not registered");
+      })
+        .then(() => {
+          res
+            .status(200)
+            .json({ success: true, message: "Call Back registered" });
+        })
+        .catch((err) => {
+          throw new Error(`Call Back not registered due to ${err.message}`);
+        });
     }
   } catch (err) {
     res.status(errorCode || 500).json({
