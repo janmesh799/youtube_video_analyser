@@ -20,6 +20,7 @@ async function getVideoInfo(link) {
         views: statistics.viewCount,
         likes: statistics.likeCount,
         comments: statistics.commentCount,
+        uploadedOn: snippet.publishedAt,
         subscribers,
       };
       return details;
