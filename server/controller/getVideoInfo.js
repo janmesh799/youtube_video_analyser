@@ -10,6 +10,7 @@ async function getVideoInfo(link) {
     console.log(apiUrl);
     const response = await axios.get(apiUrl);
     const data = await response.data;
+    console.log(data);
     if (data.items && data.items.length > 0) {
       const video = data.items[0];
       const { snippet, statistics } = video;
@@ -26,6 +27,7 @@ async function getVideoInfo(link) {
       return details;
     } else {
       console.log("Video not found");
+      return false;
     }
   } catch (error) {
     console.error("Error fetching data:", error);
