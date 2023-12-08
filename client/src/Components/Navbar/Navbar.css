@@ -1,0 +1,123 @@
+/* Navbar.css */
+
+.navbar-container {
+  width: 100%;
+  height: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background: #101010;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.request-call-back-button {
+  border: 0.1px solid white;
+  outline: none;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  height: 3vh;
+  width: 17vw;
+  border-radius: 2vh;
+}
+.request-call-back-button :hover {
+  cursor: pointer;
+}
+.request-call-back-button span {
+  color: white;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+.other-video-button {
+  color: white;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  margin: 0rem 1rem;
+  border: 0.1px solid white;
+  height: 3vh;
+  padding: 0.5rem 1rem;
+  border-radius: 2vh;
+  cursor: pointer;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  color: white;
+  font-size: 24px;
+  font-family: Sora;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.beta-badge {
+  margin-left: 10px;
+  padding: 4px 8px;
+  background: #232426;
+  color: white;
+  font-size: 10px;
+  font-family: Inter;
+  font-weight: 400;
+  border-radius: 4px;
+}
+
+.second-part-container {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Media Queries */
+
+/* Mobile Devices */
+@media screen and (max-width: 600px) {
+  .navbar-container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .login-button {
+    padding: 8px 12px;
+    gap: 6px;
+  }
+
+  .button-text {
+    font-size: 14px;
+  }
+}
+
+/* Tablet Devices */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .navbar-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* Laptop Devices and Larger */
+@media screen and (min-width: 1025px) {
+  /* Add any specific styles for larger screens if needed */
+}
