@@ -1,0 +1,81 @@
+.heading-h1 {
+  color: white;
+  font-size: 50px;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 72px;
+  word-wrap: break-word;
+}
+
+.heading-h3 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 36px;
+  word-wrap: break-word;
+}
+.search-form {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 0rem;
+}
+.input-container {
+  height: 5vh;
+  width: 30vw;
+  border-radius: 2.5vh;
+  border: 2px solid #b4b4b4cc;
+  background-color: rgb(16, 16, 16);
+  display: flex;
+  flex-direction: row;
+  margin: 0rem 1rem;
+}
+.search-input {
+  color: #373737;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 400;
+  word-wrap: break-word;
+  border: none;
+  background-color: rgb(16, 16, 16);
+  width: 70%;
+}
+
+.search-input:focus {
+  /* Hide the default focus outline */
+  outline: none;
+  /* Optionally, you can add a box shadow to indicate focus if needed */
+  box-shadow: none;
+}
+.search-button {
+  width: 10vw;
+  background-color: #ff2020;
+  height: 5vh;
+  border-radius: 2.5vh;
+  color: white;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
+  word-wrap: break-word;
+  border: none;
+}
+
+.play-art {
+  background-color: #37373769;
+  width: 40vh;
+  height: 40vh;
+  border-radius: 20vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  z-index: -1;
+  bottom: -5vh;
+  right: -5vh;
+}
+
+.play-img {
+  width: 15vh;
+  height: 15vh;
+  margin: auto;
+}

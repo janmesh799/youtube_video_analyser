@@ -1,0 +1,71 @@
+.main-video-container {
+  height: 25vh;
+  background-color: #37373769;
+  border-radius: 1.25vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+}
+.main-video-thumbnail {
+  background: linear-gradient(0deg, white 0%, white 100%);
+  height: 17vh;
+  width: auto;
+  border-radius: 1vh;
+}
+.uploaded-on-text {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0.5rem;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+.stats-container{
+  max-width: 35%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.stats-container h3{
+  /* width: 20%; */
+}
+.stats-text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.earnings-box {
+  color: white;
+  font-size: 2rem;
+  font-family: Inter;
+  font-weight: 700;
+  word-wrap: break-word;
+  width: 80%;
+  height: 80%;
+  border-radius: 0.5rem;
+  background-color: #282828;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.check-button {
+  height: 3rem;
+  width: 10rem;
+  border-radius: 3rem;
+  background-color: white;
+  color: black;
+  margin: auto;
+  border: none;
+}
