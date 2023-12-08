@@ -6,7 +6,12 @@ const getDetails = async (req, res) => {
     const link = req.headers.link;
     const details = await getVideoInfo(link);
     const earnings = calculateEarnings(details);
-    res.status(200).json({ success: true, details,earnings });
+    if (details) {
+      res.status(200).json({ success: true, details, earnings });
+    } else {
+      errorCode = 404;
+      throw new Error("video not found");
+    }
   } catch (err) {
     res.status(errorCode || 500).json({
       success: false,
