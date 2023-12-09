@@ -1,0 +1,99 @@
+/* App.css */
+
+.modal-overlay {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* backdrop-filter: blur(2.5px); */
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+}
+
+.close-button {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 0.2px solid white; */
+  border-radius: 2vh;
+  margin: 20vh auto auto auto;
+  width: 25vw;
+  height: 45vh;
+  text-align: center;
+  background-color: rgba(0, 0, 0);
+  position: relative;
+}
+.request-heading {
+  color: white;
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+.request-form {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+.request-input {
+  width: 60%;
+  margin: 1rem auto;
+  color: #707070;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 400;
+  word-wrap: break-word;
+  background-color: #282828;
+  border: none;
+  border-radius: 0.75vh;
+  padding: 0.5rem;
+}
+.request-input {
+  outline: none;
+}
+
+.request-submit {
+  width: 30vh;
+  margin: auto;
+  height: 5vh;
+  border: none;
+  border-radius: 2.5vh;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.done-icon {
+  margin: auto;
+}
+.callback-done-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 20px;
+  word-wrap: break-word;
+}
+.check-another-button {
+  background-color: #ff0000;
+  border: none;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 400;
+  word-wrap: break-word;
+}

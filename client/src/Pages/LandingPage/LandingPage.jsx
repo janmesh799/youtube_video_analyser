@@ -6,8 +6,10 @@ import playButton from "../../images/playButton.svg";
 import MainVideoCard from "../../Components/MainVideoCard/MainVideoCard";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import LoadingBar from "react-top-loading-bar";
 
 const LandingPage = () => {
+  const [progress, setProgress] = useState(0);
   const navigate = useNavigate();
   const queryParameters = new URLSearchParams(window.location.search);
   let searchedLink = queryParameters.get("link");
@@ -32,31 +34,36 @@ const LandingPage = () => {
   useEffect(() => {
     console.log("searched link = ", searchedLink);
     const fetchData = async () => {
+      setProgress(10);
       const config = {
         headers: {
           "Content-Type": "application/json",
           link: searchedLink,
         },
       };
+      setProgress(20);
       try {
+        setProgress(30);
         const response = await axios.get(
           "https://youtube-video-analyser-backend.vercel.app/api/video",
           config
         );
-
+        setProgress(60);
         const videoId = searchedLink.split("?v=")[1];
 
         let linksList = JSON.parse(localStorage.getItem("links")) || [];
-
+        setProgress(70);
         if (!linksList.includes(videoId)) {
           linksList.push(videoId);
           localStorage.setItem("links", JSON.stringify(linksList));
         }
-
+        setProgress(90);
         if (response.status === 200) {
           setData(response.data);
         }
+        setProgress(100);
       } catch (err) {
+        setProgress(100);
         console.log(err.message);
         toast.warn("Video Not Found");
       }
@@ -75,6 +82,11 @@ const LandingPage = () => {
         margin: "2rem auto",
       }}
     >
+      <LoadingBar
+        color={"red"}
+        progress={progress}
+        onLoaderFinished={() => setProgress(0)}
+      />
       <h1 className="heading-h1"> Discover your earning potential </h1>
       <h3 className="heading-h3">
         Turn your Youtube expertise into a lucrative income through resource
